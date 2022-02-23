@@ -1,0 +1,44 @@
+.list{
+  background-color: #4a148c;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    line-height: 98px;
+    margin: 10px 0px;
+    border-radius: 20px;
+
+    .list_item{
+      font-weight: bold;
+    }
+    .edit-icon{
+      height: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .delete-icon{
+      height: 30px;
+      cursor: pointer;
+
+    }
+    .img-container{
+      height: 50px;
+      width: 50px;
+      margin-top: 25px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      overflow: hidden;
+      .child-img{
+        height: 50px;
+        width: 100%;
+        margin: 0px 0px 50px 0px;
+      }
+    }
+}
+
+.test{
+  color: red;
+  .list_item{
+    font-weight: bold;
+  }
+  
+}
