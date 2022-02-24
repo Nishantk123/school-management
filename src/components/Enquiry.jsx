@@ -27,8 +27,10 @@ const Enquiry = () => {
     },
   ];
   const [edit, setEdit] = useState(false)
-  const handleEditModalOpen = () =>{
-    setEdit(true)
+  const [selected_data, setSeletedData]= useState({})
+  const handleEditModalOpen = (data) =>{
+      setSeletedData(data)
+      setEdit(true)
   }
   const handleModalClose = () =>{
       setEdit(false);
@@ -36,18 +38,11 @@ const Enquiry = () => {
   return (
     <div>
       <div className="container-fluid">
+        <h3 className="text-center my-3">Enquiry list</h3>
         {
-          // enquiryData.map((data,index)=>{
-          //     return(
-          //         <div>
-          //             Hi
-          //         </div>
-          //     )
-          // })
-
           _.map(enquiryData, (data, index) => {
             return (
-              <div className="list">
+              <div className="list" key={index}>
                 <div className="img-container">
                   <img
                     className="child-img"
@@ -63,7 +58,7 @@ const Enquiry = () => {
                   <img
                     className="edit-icon"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwRWHj5I3m_KJdm05iic2uYU2NtNdTssHZKQ&usqp=CAU"
-                    onClick={handleEditModalOpen}
+                    onClick={()=>handleEditModalOpen(data)}
                   />
                   <img
                     className="delete-icon"
@@ -75,7 +70,7 @@ const Enquiry = () => {
           })
         }
       </div>
-      <EditModal show={edit} handleClose={handleModalClose}/>
+      <EditModal show={edit} handleClose={handleModalClose} editData={selected_data}/>
     </div>
   );
 };
