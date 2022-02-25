@@ -5,12 +5,14 @@ import { Modal, Form, Button } from "react-bootstrap";
 const EditModal = ({ show, handleClose, editData }) => {
   const [parent_name, setParentName] = useState("");
   const [child_name, setChildName] = useState("");
+  const [parent_email, setParentEmail] = useState("");
   console.log("editData", editData);
 
   useEffect(() => {
     console.log(editData);
     setParentName(editData.parent_name);
     setChildName(editData.child_name);
+    setParentEmail(editData.parent_email)
   }, [editData]);
   return (
     <Modal show={show} onHide={handleClose}>
@@ -41,7 +43,7 @@ const EditModal = ({ show, handleClose, editData }) => {
               <Form.Control
                 type="email"
                 placeholder="parent email"
-                value={editData.parent_mobile}
+                value={parent_email}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
