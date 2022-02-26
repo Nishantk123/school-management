@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import EditModal from "./EditModal";
+import SideNav from "./SideNav";
 
 const Enquiry = () => {
   const enquiryData = [
@@ -39,6 +40,9 @@ const Enquiry = () => {
     <div>
       <div className="container-fluid">
         <h3 className="text-center my-3">Enquiry list</h3>
+        <div className="d-flex">
+          <SideNav />
+          <div className="w-100 px-3">
         {
           _.map(enquiryData, (data, index) => {
             return (
@@ -69,6 +73,8 @@ const Enquiry = () => {
             );
           })
         }
+        </div>
+        </div>
       </div>
       <EditModal show={edit} handleClose={handleModalClose} editData={selected_data}/>
     </div>
