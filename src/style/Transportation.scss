@@ -1,0 +1,18 @@
+.transportation{
+    padding-top: 100px;
+    min-height: 90vh;
+    background-color: darkslategray;
+    color: white;
+    .form{
+      margin-bottom: 20px;
+    }
+  }
+  .vertical-line{
+    border-left: 2px solid black;
+    height: 90vh;
+    position:absolute;
+    left: 50%;
+  }
+  .location{
+    margin-right: 100px;
+  }

@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Enrollment from './components/Enrollment';
 import Transportation from './components/Transportation';
+import Calculator from './Calculator';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/register' component={Register} />
       <Route exact path="/enrollment" component={Enrollment} />
       <Route exact path="/transportation" component ={Transportation} />
+      <Route exact path="/cal" component={Calculator} />
     </div>
     </Router>
   );

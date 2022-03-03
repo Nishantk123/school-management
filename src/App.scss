@@ -56,3 +56,17 @@
   margin-right: 10px;
   cursor: pointer;
 }
+
+@import url("./style/Transportation.scss");
+.login-form{
+  background-color: rgb(236, 236, 216);
+  min-height: 100vh;
+  form{
+      width: 50%;
+      margin: auto;
+      border: 2px solid gray;
+      border-radius: 30px;
+      padding: 15px;
+      box-shadow: 0 5px 5px 5px;
+  }
+}

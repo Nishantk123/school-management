@@ -3,6 +3,7 @@ import _ from "lodash";
 import EditModal from "./EditModal";
 import SideNav from "./SideNav";
 import Header from "./Header";
+import ChangeStateModal from "./ChangeStateModal";
 
 const Enquiry = () => {
   const enquiryData = [
@@ -84,6 +85,7 @@ const Enquiry = () => {
         handleClose={handleModalClose}
         editData={selected_data}
       />
+      <ChangeStateModal show={true}/>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      Hello this home page
+      Hello this home page 1
     </div>
   );
 };
