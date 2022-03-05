@@ -47,9 +47,23 @@
   height: calc(100vh - 56px);
 }
 
-.pro-sidebar-inner{
-  background: #4a148c !important;
+.primary{
+  .pro-sidebar-inner{
+    background: #4a148c !important;
+  }
 }
+.secondary{
+  .pro-sidebar-inner{
+    background: #977d08 !important;
+  }
+}
+.success{
+  .pro-sidebar-inner{
+    background: #088297 !important;
+  }
+}
+
+
 
 .move-icon{
   height: 30px;

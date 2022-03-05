@@ -1,37 +1,37 @@
 import React from "react";
 import Header from "./Header";
-import SideNav from './SideNav';
-import _ from 'lodash';
-const Enrollment = () =>{
-    const EnrollData = [
-        {
-          parent_name: "test",
-          child_name: "test2",
-          parent_mobile: "898989898",
-          enquired_class: "1",
-          parent_email: "test@gmail.com",
-        },
-        {
-          parent_name: "test",
-          child_name: "test2",
-          parent_mobile: "898989898",
-          enquired_class: "1",
-          parent_email: "test@gmail.com",
-        },
-        {
-          parent_name: "test",
-          child_name: "test2",
-          parent_mobile: "898989898",
-          enquired_class: "1",
-          parent_email: "test@gmail.com",
-        },
-      ];
-    return(
-        <div>
-            <Header />
-            <div className="d-flex">
-                <SideNav />
-                <div className="w-100 px-3">
+import SideNav from "./SideNav";
+import _ from "lodash";
+const Enrollment = () => {
+  const EnrollData = [
+    {
+      parent_name: "test",
+      child_name: "test2",
+      parent_mobile: "898989898",
+      enquired_class: "1",
+      parent_email: "test@gmail.com",
+    },
+    {
+      parent_name: "test",
+      child_name: "test2",
+      parent_mobile: "898989898",
+      enquired_class: "1",
+      parent_email: "test@gmail.com",
+    },
+    {
+      parent_name: "test",
+      child_name: "test2",
+      parent_mobile: "898989898",
+      enquired_class: "1",
+      parent_email: "test@gmail.com",
+    },
+  ];
+  return (
+    <div>
+      <Header />
+      <div className="d-flex">
+        <SideNav classname="success" />
+        <div className="w-100 px-3">
           {_.map(EnrollData, (data, index) => {
             return (
               <div className="list" key={index}>
@@ -65,9 +65,9 @@ const Enrollment = () =>{
             );
           })}
         </div>
-            </div>
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Enrollment;

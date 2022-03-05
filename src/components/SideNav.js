@@ -26,7 +26,7 @@ import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
 // import "./Header.css";
 
-const SideNav = () => {
+const SideNav = ({classname}) => {
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false);
 
@@ -38,7 +38,7 @@ const SideNav = () => {
 
   return (
     <>
-      <div id="Sidnav">
+      <div id="Sidnav" className={classname}>
         {/* collapsed props to change menu size using menucollapse state */}
         <ProSidebar collapsed={menuCollapse}>
           <SidebarHeader>

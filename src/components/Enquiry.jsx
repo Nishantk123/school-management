@@ -30,6 +30,7 @@ const Enquiry = () => {
     },
   ];
   const [edit, setEdit] = useState(false);
+  const [showMove, setShowMove] = useState(false);
   const [selected_data, setSeletedData] = useState({});
   const handleEditModalOpen = (data) => {
     setSeletedData(data);
@@ -37,13 +38,17 @@ const Enquiry = () => {
   };
   const handleModalClose = () => {
     setEdit(false);
+    setShowMove(false);
+  };
+  const handlePageMove = () => {
+    setShowMove(true);
   };
   return (
     <div>
       <Header />
       <div className="">
         <div className="d-flex">
-          <SideNav />
+          <SideNav classname="primary"/>
           <div className="w-100 px-3">
             {_.map(enquiryData, (data, index) => {
               return (
@@ -68,6 +73,7 @@ const Enquiry = () => {
                     <img
                       className="move-icon"
                       src="https://img.icons8.com/ios/500/forward-arrow.png"
+                      onClick={handlePageMove}
                     />
                     <img
                       className="delete-icon"
@@ -85,7 +91,12 @@ const Enquiry = () => {
         handleClose={handleModalClose}
         editData={selected_data}
       />
-      <ChangeStateModal show={true}/>
+      <ChangeStateModal
+        show={showMove}
+        handleClose={handleModalClose}
+        title="Move enquiry to register"
+        current_page="enquiry"
+      />
     </div>
   );
 };

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import SideNav from "./SideNav";
 import _ from "lodash";
+import ChangeStateModal from "./ChangeStateModal";
 const Register = () => {
   const registerData = [
     {
@@ -27,11 +28,19 @@ const Register = () => {
     },
   ];
 
+  const [showMove, setShowMove] = useState(false);
+  const handleModalClose = () => {
+    // setEdit(false);
+    setShowMove(false);
+  };
+  const handlePageMove = () => {
+    setShowMove(true);
+  };
   return (
     <div>
       <Header />
       <div className=" d-flex">
-        <SideNav />
+        <SideNav classname="secondary" />
         <div className="w-100 px-3">
           {_.map(registerData, (data, index) => {
             return (
@@ -56,6 +65,7 @@ const Register = () => {
                   <img
                     className="move-icon"
                     src="https://img.icons8.com/ios/500/forward-arrow.png"
+                    onClick={handlePageMove}
                   />
                   <img
                     className="delete-icon"
@@ -67,6 +77,12 @@ const Register = () => {
           })}
         </div>
       </div>
+      <ChangeStateModal
+        show={showMove}
+        handleClose={handleModalClose}
+        title="Move register to enrollment"
+        current_page="register"
+      />
     </div>
   );
 };
